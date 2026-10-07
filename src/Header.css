@@ -1,6 +1,6 @@
 .top-header {
   width: 100%;
-  min-height: 106px;
+  min-height: 94px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,7 +103,7 @@
 
 .icon-btn {
   position: relative;
-  width: 30px;
+  width: 44px;
   height: 30px;
   border: none;
   background: transparent;
