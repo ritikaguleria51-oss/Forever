@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Main product card replicating the reference design */
+.collection-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 32px;
+  border: 1px solid rgba(215, 225, 235, 0.7);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05), 0 2px 6px rgba(15, 23, 42, 0.02);
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  width: min(1000px, 90vw);
+  max-height: min(520px, calc(100vh - 150px));
+  margin: 0 auto;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09), 0 4px 10px rgba(15, 23, 42, 0.03);
+  border-color: rgba(180, 200, 220, 0.9);
+}
+
+/* Left Visual Column */
+.collection-card-visual {
+  position: relative;
+  flex: 0 0 45%;
+  height: 100%;
+  min-height: 420px;
+  padding: 20px 18px 0 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #fafaf9;
+  overflow: hidden;
+}
+
+/* Style your way cursive script */
+.collection-script-box {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  z-index: 5;
+  font-family: 'Caveat', cursive;
+  color: #556c80;
+  transform: rotate(-9deg);
+  user-select: none;
+}
+
+.script-style {
+  display: block;
+  font-size: 38px;
+  line-height: 0.88;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.script-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: -2px;
+}
+
+.script-yourway {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  border-bottom: 2px solid #556c80;
+  padding-bottom: 2px;
+}
+
+.script-heart {
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+}
+
+/* Top-left botanical leaf doodle */
+.collection-doodle-tl {
+  position: absolute;
+  top: 130px;
+  left: 8px;
+  width: 90px;
+  height: 90px;
+  z-index: 4;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Soft pastel arch backdrop */
+.collection-arch-backdrop {
+  position: absolute;
+  top: 44px;
+  bottom: 0;
+  left: 36px;
+  right: 24px;
+  background: linear-gradient(180deg, #d3e4f0 0%, #c4dbe9 100%);
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Product model image container */
+.collection-image-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  max-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.collection-product-img {
+  max-width: 92%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  transition: transform 0.35s ease;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.08));
+}
+
+.collection-card:hover .collection-product-img {
+  transform: scale(1.025);
+}
+
+/* Right Info Column */
+.collection-card-info {
+  position: relative;
+  flex: 1;
+  padding: 30px 42px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  background: #ffffff;
+}
+
+/* 4 Trust Badges */
+.collection-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.collection-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.collection-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #8ca1b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  background: rgba(245, 249, 252, 0.6);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.collection-card:hover .collection-badge-icon {
+  border-color: #647f96;
+  background: rgba(220, 235, 246, 0.7);
+}
+
+.collection-badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.collection-badge-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.25;
+}
+
+.collection-badge-sep {
+  width: 1px;
+  height: 38px;
+  background: #e2e8f0;
+}
+
+/* Title Area */
+.collection-title-wrap {
+  margin-bottom: 2px;
+}
+
+.collection-title-prefix {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+
+.collection-title-main {
+  margin: 2px 0 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+}
+
+.collection-title-divider {
+  width: 48px;
+  height: 3px;
+  background: #7C91A3;
+  border-radius: 2px;
+  margin: 12px 0 16px;
+}
+
+/* Description */
+.collection-description {
+  margin: 0 0 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #556472;
+  max-width: 440px;
+}
+
+/* Star Ratings Row */
+.collection-ratings-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.collection-stars-list {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.collection-star-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.collection-star-svg.empty polygon {
+  fill: none;
+}
+
+.collection-reviews-count {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #374151;
+  margin-left: 6px;
+}
+
+/* CTA Pill Container */
+.collection-cta-pill {
+  background: #dce7f0;
+  border-radius: 9999px;
+  padding: 6px 28px 6px 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.collection-cta-button {
+  background: #1d2530;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 13px 28px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.collection-cta-button:hover {
+  background: #0f172a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+}
+
+.collection-cta-button.added {
+  background: #059669;
+}
+
+.collection-pill-line {
+  width: 1px;
+  height: 28px;
+  background: #c1d2e0;
+}
+
+.collection-cta-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111b28;
+}
+
+/* Bottom Right Decorative Blob & Foliage */
+.collection-blob-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 145px;
+  height: 120px;
+  background: #dce8f2;
+  border-top-left-radius: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.collection-doodle-br {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 115px;
+  height: 115px;
+  z-index: 2;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .collection-card {
+    border-radius: 28px;
+  }
+
+  .collection-card-visual {
+    flex: 0 0 44%;
+    min-height: 480px;
+    padding: 20px 16px 0 20px;
+  }
+
+  .collection-image-container {
+    height: 440px;
+  }
+
+  .collection-card-info {
+    padding: 32px 32px 30px 28px;
+  }
+
+  .collection-title-prefix {
+    font-size: 24px;
+  }
+
+  .collection-title-main {
+    font-size: 40px;
+  }
+
+  .collection-badges-row {
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .collection-badge-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 860px) {
+  .collection-card {
+    flex-direction: column;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .collection-card-visual {
+    flex: auto;
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .collection-image-container {
+    height: 400px;
+  }
+
+  .collection-card-info {
+    padding: 32px 28px 36px;
+  }
+
+  .collection-blob-br {
+    width: 120px;
+    height: 90px;
+  }
+
+  .collection-doodle-br {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 540px) {
+  .collection-card {
+    border-radius: 22px;
+  }
+
+  .collection-card-visual {
+    min-height: 350px;
+    padding: 16px 14px 0 16px;
+  }
+
+  .collection-image-container {
+    height: 330px;
+  }
+
+  .collection-script-box {
+    top: 18px;
+    left: 20px;
+  }
+
+  .script-style {
+    font-size: 32px;
+  }
+
+  .script-yourway {
+    font-size: 24px;
+  }
+
+  .collection-badges-row {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .collection-badge-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .collection-badge-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .collection-badge-text {
+    font-size: 10px;
+  }
+
+  .collection-title-prefix {
+    font-size: 20px;
+  }
+
+  .collection-title-main {
+    font-size: 32px;
+  }
+
+  .collection-description {
+    font-size: 14.5px;
+    margin-bottom: 18px;
+  }
+
+  .collection-cta-pill {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 18px 5px 6px;
+    gap: 12px;
+  }
+
+  .collection-cta-button {
+    padding: 11px 18px;
+    font-size: 13.5px;
+  }
+
+  .collection-cta-price {
+    font-size: 22px;
+  }
+}

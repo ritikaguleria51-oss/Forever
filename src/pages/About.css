@@ -1,0 +1,261 @@
+.about-page {
+  width: min(100% - 48px, 1240px);
+  margin: 0 auto;
+  padding: 22px 0 30px;
+  color: #171717;
+}
+
+.about-heading,
+.about-section-heading {
+  text-align: center;
+}
+
+.about-heading h1,
+.about-section-heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.about-heading h1::after,
+.about-section-heading h2::after {
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.about-heading p,
+.about-section-heading p {
+  margin: 7px auto 0;
+  color: #5d5d5d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.78fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: 34px;
+  margin-top: 25px;
+}
+
+.about-story-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.about-story-copy {
+  display: grid;
+  gap: 13px;
+}
+
+.about-story-copy h2 {
+  display: inline-block;
+  margin: 0 0 6px;
+  border-bottom: 1px solid #171717;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about-story-copy p {
+  margin: 0;
+  color: #353535;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.about-benefits {
+  margin-top: 38px;
+}
+
+.about-section-heading h2 {
+  font-size: 21px;
+}
+
+.about-benefit-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+  border: 1px solid #d8dadd;
+}
+
+.about-benefit {
+  padding: 18px 20px 16px;
+  text-align: center;
+}
+
+.about-benefit + .about-benefit {
+  border-left: 1px solid #d8dadd;
+}
+
+.about-benefit svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #116c7a;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.about-benefit h3 {
+  margin: 7px 0 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.about-benefit p {
+  max-width: 290px;
+  margin: 0 auto;
+  color: #3f3f3f;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.about-newsletter {
+  position: relative;
+  display: flex;
+  min-height: 310px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 22px;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: #287c76;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.35)),
+    url("../assest/images/ps9on9urdrorj7qmf1ub.png");
+  background-position: center, 30% 20%;
+  background-size: cover;
+  color: #fff;
+}
+
+.about-newsletter-content {
+  width: min(49%, 460px);
+  padding: 30px 34px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.about-newsletter-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.about-newsletter h2 {
+  margin: 7px 0 5px;
+  font-size: clamp(19px, 2.2vw, 27px);
+  line-height: 1.2;
+}
+
+.about-newsletter p {
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.about-newsletter-form {
+  display: flex;
+  min-height: 36px;
+  background: #fff;
+  text-shadow: none;
+}
+
+.about-newsletter-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 0 11px;
+  border: 0;
+  color: #222;
+  font: inherit;
+  font-size: 10px;
+}
+
+.about-newsletter-form button {
+  padding: 0 15px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.about-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 700px) {
+  .about-story {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .about-story-image {
+    max-height: 360px;
+  }
+
+  .about-newsletter {
+    min-height: 270px;
+    justify-content: center;
+    background-position: 42% center;
+  }
+
+  .about-newsletter-content {
+    width: 100%;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.28);
+  }
+}
+
+@media (max-width: 520px) {
+  .about-page {
+    width: min(100% - 32px, 1240px);
+    padding-top: 18px;
+  }
+
+  .about-heading h1 {
+    font-size: 20px;
+  }
+
+  .about-heading p,
+  .about-section-heading p {
+    max-width: 310px;
+  }
+
+  .about-benefit-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-benefit + .about-benefit {
+    border-top: 1px solid #d8dadd;
+    border-left: 0;
+  }
+
+  .about-benefit {
+    padding: 16px 20px;
+  }
+
+  .about-newsletter-content {
+    padding: 20px;
+  }
+}

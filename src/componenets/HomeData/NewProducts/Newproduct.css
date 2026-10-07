@@ -1,0 +1,95 @@
+.newproduct-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 8px 24px;
+  box-sizing: border-box;
+}
+
+.promo-card {
+  position: relative;
+  min-height: 300px;
+  height: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  margin: 50px 0;
+}
+
+.promo-chair {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)),
+    url('../../../assest/images/hero_img1-D4IcBngv.jpg');
+  background-position: center center;
+}
+
+.promo-lighting {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
+    url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80');
+  background-position: center center;
+}
+
+.promo-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  padding: 20px 24px;
+}
+
+.promo-kicker {
+  display: block;
+  margin: 0;
+  font-size: clamp(2rem, 2.3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: rgba(35, 35, 35, 0.9);
+}
+
+.promo-title {
+  margin: 0;
+  font-size: clamp(3.2rem, 4vw, 6.2rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+  color: rgba(35, 35, 35, 0.9);
+}
+
+.promo-price {
+  margin: 18px 0 22px;
+  font-size: clamp(1.1rem, 1.4vw, 1.8rem);
+  font-weight: 500;
+  color: rgba(35, 35, 35, 0.92);
+}
+
+.promo-price span {
+  color: #f57a1d;
+  font-weight: 700;
+}
+
+.promo-btn {
+  border: none;
+  background: linear-gradient(180deg, #ff9d45 0%, #f57a1d 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 16px 44px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(245, 122, 29, 0.25);
+}
+
+@media (max-width: 900px) {
+  .newproduct-section {
+    grid-template-columns: 1fr;
+  }
+}
